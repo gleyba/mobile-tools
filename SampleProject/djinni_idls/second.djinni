@@ -1,0 +1,7 @@
+@extern "yaml/first.yaml"
+
+test_record_second = record {
+    id: i32;
+    info: string;
+    rec_from_first: test_record_with_model_and_dependency;
+}

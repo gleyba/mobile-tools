@@ -1,0 +1,18 @@
+{
+    "name" : "SampleProject",
+    "product_name" : "sample_project",
+    "organization" : "Not Existing One",
+    "bundle" : "not.existing.one",
+    "template" : "with-djinni",
+    "djinni" : {
+        "idls" : [
+            {
+                "name" : "first",
+                "idlPath" : "djinni_idls/first.djinni"
+            },{
+                "name" : "second",
+                "idlPath" : "djinni_idls/second.djinni"
+            }
+        ]
+    }
+}

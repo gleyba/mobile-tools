@@ -1,0 +1,25 @@
+test_enum = enum {
+    option1;
+    option2;
+    option3;
+} @(iface)
+
+test_record_with_model = record +m {
+    id: i32 @(autoincrement,primary);
+    info: string;
+    defaulted_val: i32 = 1;
+    optional_field: optional<string>;
+    type: test_enum;
+} @(sqlite,iface)
+
+test_record_no_model = record {
+    id: i32;
+    info: string;
+    type: test_enum;
+}
+
+test_record_with_model_and_dependency = record +m {
+    id: i32 @(autoincrement,primary);
+    info: string;
+    record_ref: test_record_with_model @(foreign(id));
+} @(sqlite,iface)

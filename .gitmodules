@@ -1,0 +1,3 @@
+[submodule "external_tools/djinni"]
+	path = external_tools/djinni
+	url = https://github.com/gleyba/djinni.git
